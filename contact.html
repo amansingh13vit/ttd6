@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Tirupathi Timber Depot</title>
+	
+<link rel="shortcut icon" href="images/icon.jpg"; /> 
+<!-- custom-theme -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content=" " />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //custom-theme -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/easy-responsive-tabs.css" rel='stylesheet' type='text/css'/>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property="" />
+<script type="text/javascript" src="//maps.googleapis.com/maps/api/js"></script>
+<!-- font-awesome-icons -->
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<!-- //font-awesome-icons -->
+<link href="//fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+</head>
+<body> 
+
+	<div class="w3layouts_newsletter">
+		<div class="container">
+			<div class="agileits_w3layouts_heding">
+				<p>Get Updates</p>
+				<h3><span>Don't Forget to </span> Subscribe</h3>
+				<img src="images/head1.png" alt="Lines" />
+			</div>
+			<div class="w3layouts_newsletter_right">
+			<!--<p class="para-w3layouts white"> Quis nostrum exercitationem ullam corporis suscipit 
+					laboriosam, nisi ut aliquid ex ea commodi consequatur, Quis autem vel eum iure 
+					reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.</p>-->
+			        <form  method="post" action="subs.php" id="sform" name="form">
+					<input type="text" name="Name" id="name" placeholder="Name">
+					<input type="email" name="Email" id="email" placeholder="Email Address">
+					<input type="submit" value="Subscribe" name="SEND">
+				</form>
+                          <center><font color="green" size="20"><p id="success"></p></font></center>
+                          <center><font color="red" size="20"><p id="error"></p></font></center>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+<!-- //newsletter -->
+<!-- contact -->
+	<div class="w3l_footer">
+		<div class="container">
+	<div class="col-md-4">
+	<h5><a href="index.html">Tirupathi Timber Depot</a></h5>
+	<p>No. 63/3, Hegde Nagar Main Road,<br>
+Opp. Shobha City, Chokkanahalli, <br>New Airport Road<br>
+Bengaluru – 560064, India<br><br>
+Phone      : +91 80 26695966<br>
+Mob        : +91 9900991233<br>
+Mob        : +91 9742438989<br>
+WhatsApp   : +44 7452158640<br>
+E-mail: info@ttdwood.com</p>
+	</div>
+	<div class="col-md-8 botttom-nav-agileits">
+		<ul class="nav-w3ls">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="about.html">About Us</a></li>
+			<li><a href="gallery.html">Products</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+		<div class="w3l-social">
+			<ul>
+				<li><a href="https://www.facebook.com/Tirupathi-Timber-Depot-1535153256600354/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/ttdwood/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="https://www.instagram.com/tirupathitimberdepot1994/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+				<li><a href="https://www.linkedin.com/company/ttdwoods/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+			</ul>
+		</div>
+		<div class="clearfix"> </div>
+	</div>	
+	<div class="clearfix"> </div>
+	</div>
+</div>
+<!-- //contact -->
+<!-- footer -->
+	<div class="w3_agile_footer">
+		<div class="container">
+			<p>© 2017 Tirupathi Timber Depot. All rights reserved.</p>
+			<div class="arrow-container animated fadeInDown">
+				<a href="#home" class="arrow-2 scroll">
+					<i class="fa fa-angle-up"></i>
+				</a>
+				<div class="arrow-1 animated hinge infinite zoomIn"></div>
+			</div>
+		</div>
+	</div>
+<!-- //footer -->
+<!-- js -->
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script>
+$("#sform").submit(function(e) {
+	e.preventDefault();
+	var name = $("#name").val();
+	var email = $("#email").val();
+	
+	if(name == "" || email == "" ) {
+		$("#error").show().html("All Fields Are Required. Try Again!");
+	} else {
+		$("#error").html("").hide();
+		$.ajax({
+			type: "POST",
+			url: "subs.php",
+			data: "name="+name+"&email="+email,
+			success: function(data){
+				$('#success').fadeIn().html(data);
+				setTimeout(function() {
+					$('#success').fadeOut("slow");
+				}, 3000 );
+
+			}
+		});
+	}
+})
+</script>
+<!-- //js -->
+<!--banner form script-->
+									<script type='text/javascript'>//<![CDATA[ 
+									$(window).load(function(){
+									 $( "#slider-range" ).slider({
+												range: true,
+												min: 0,
+												max: 9000,
+												values: [ 1000, 7000 ],
+												slide: function( event, ui ) {  $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+												}
+									 });
+									$( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) + " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+
+									});//]]>  
+
+									</script>
+									<script type="text/javascript" src="js/jquery-ui.js"></script>
+<!--//banner form script-->
+						<script src="js/responsiveslides.min.js"></script>
+			<script>
+						// You can also use "$(window).load(function() {"
+						$(function () {
+						  // Slideshow 4
+						  $("#slider4").responsiveSlides({
+							auto: true,
+							pager:true,
+							nav:false,
+							speed: 500,
+							namespace: "callbacks",
+							before: function () {
+							  $('.events').append("<li>before event fired.</li>");
+							},
+							after: function () {
+							  $('.events').append("<li>after event fired.</li>");
+							}
+						  });
+					
+						});
+			</script>
+<!--Rersponsive tabs-->
+<script src="js/easy-responsive-tabs.js"></script>
+<script>
+$(document).ready(function () {
+$('#horizontalTab').easyResponsiveTabs({
+type: 'default', //Types: default, vertical, accordion           
+width: 'auto', //auto or any width like 600px
+fit: true,   // 100% fit in a container
+closed: 'accordion', // Start closed if in accordion view
+activate: function(event) { // Callback function if tab is switched
+var $tab = $(this);
+var $info = $('#tabInfo');
+var $name = $('span', $info);
+$name.text($tab.text());
+$info.show();
+}
+});
+$('#verticalTab').easyResponsiveTabs({
+type: 'vertical',
+width: 'auto',
+fit: true
+});
+});
+</script>
+<!-- //Rersponsive tabs -->
+<!-- flexSlider -->
+	<script defer src="js/jquery.flexslider.js"></script>
+					<script type="text/javascript">
+					$(window).load(function(){
+					  $('.flexslider').flexslider({
+						animation: "slide",
+						start: function(slider){
+						  $('body').removeClass('loading');
+						}
+					  });
+					});
+				  </script>
+
+<!-- //flexSlider -->
+<!-- for bootstrap working -->
+	<script src="js/bootstrap.js"></script>
+<!-- //for bootstrap working -->
+<!-- start-smooth-scrolling -->
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+			});
+		});
+	</script>
+<!-- start-smooth-scrolling -->
+<!-- password-script -->  
+<script type="text/javascript">
+		window.onload = function () {
+			document.getElementById("password1").onchange = validatePassword;
+			document.getElementById("password2").onchange = validatePassword;
+		}
+		function validatePassword(){
+			var pass2=document.getElementById("password2").value;
+			var pass1=document.getElementById("password1").value;
+			if(pass1!=pass2)
+				document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+			else
+				document.getElementById("password2").setCustomValidity('');	 
+				//empty string means no validation error
+		}
+
+</script>
+<!-- //password-script -->
+
+<!-- stats -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.countup.js"></script>
+	<script>
+		$('.counter').countUp();
+	</script>
+<!-- //stats -->
+</body>
+</html>
